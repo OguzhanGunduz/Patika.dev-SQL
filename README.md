@@ -8,16 +8,21 @@ Patika.dev SQL HomeWorks
 ```SQL
 SELECT title, description FROM film;
 ```
+
 * Sort the data in all columns in the film table with the movie length greater than 60 AND less than 75. 
+
 ```SQL
 SELECT * FROM film 
 WHERE length > 60 AND length < 75;
 ```
+
 * Sort the data in all columns in the film table with rental_rate 0.99 AND replacement_cost 12.99 OR 28.99. 
+
 ```SQL
 SELECT * FROM film
 WHERE rental_rate > 0.99 AND replacement_cost > 12.99 OR replacement_cost = 28.99;
 ```
+
 * What is the value in the last_name column of the customer whose value is 'Mary' in the first_name column of the customer table?
 
 ```SQL
@@ -54,6 +59,7 @@ WHERE  first_name IN ('Penelope','Nick','Ed');
 SELECT * FROM film
 WHERE rental_rate IN (0.99,2.99,4.99) AND replacement_cost IN (12.99,15.99,28.99);
 ```
+
 ## HomeWork 3
 
 * List the country names in the country column of the country table, starting with the 'A' character and ending with the 'a' character. 
@@ -85,6 +91,36 @@ WHERE title LIKE 'C%' AND length > 90 AND rental_rate = 2.99;
 ```
 
 ## HomeWork 4
+
+* Sort the different values in the replacement_cost column in the film table.
+
+```SQL
+SELECT DISTINCT replacement_cost FROM  film
+```
+
+* How many different data are there in the replacement_cost column in the film table?
+
+```SQL
+SELECT COUNT(DISTINCT replacement_cost) FROM  film;
+```
+
+* How many of the film titles(title) in the film table start with the character T and at the same time the rating is equal to 'G'? 
+
+```SQL
+SELECT * FROM  film WHERE title LIKE 'T%' AND rating = 'G'
+```
+
+* How many of the country names (country) in the country table consist of 5 characters?
+
+```SQL
+SELECT COUNT(*)FROM country WHERE country LIKE '_____';
+```
+
+* How many of the city names in the city table end with the character 'R' or r? 
+
+```SQL
+SELECT COUNT(*) FROM city WHERE city ILIKE '%R';
+```
 
 
 

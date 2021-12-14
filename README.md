@@ -161,8 +161,8 @@ LIMIT 4;
 SELECT AVG(rental_rate) FROM film;
 -------------------------------------------------------
 SELECT ROUND(AVG(rental_rate) , 3) FROM film; -- Mean value with 3 digit
-
 ```
+
 * How many of the films in the film table start with the character 'C'? 
 
 ```SQL
@@ -187,4 +187,37 @@ WHERE rental_rate = 0.99;    -- They are same output
 ```SQL
 SELECT COUNT(DISTINCT(replacement_cost) FROM film
 WHERE length > 150;
+```
+
+## HomeWork 7
+
+* Group the films in the film table according to their rating values.
+
+```SQL
+SELECT rating, COUNT(*) FROM film
+GROUP BY rating;
+```
+
+* When we group the films in the film table according to the replacement_cost column, list the replacement_cost value with more than 50 films and the corresponding number of films.
+
+```SQL
+SELECT replacement_cost , COUNT(*) FROM film
+GROUP BY replacement_cost
+HAVING COUNT(*) > 50;
+```
+
+* What are the number of customers corresponding to the store_id values in the customer table?
+
+```SQL
+SELECT store_id, COUNT(*) FROM customer
+GROUP BY store_id;
+```
+
+* After grouping the city data in the city table according to the country_id column, share the country_id information with the highest number of cities and the number of cities. 
+
+```SQL
+SELECT country_id, COUNT(city) FROM city
+GROUP BY country_id
+ORDER BY COUNT(city) DESC
+LIMIT 1;
 ```

@@ -299,3 +299,27 @@ WHERE id = 10;
 DELETE FROM employee
 WHERE id = 13;
 ```
+
+## HomeWork 9
+
+*
+
+```SQL
+SELECT city, country FROM city
+INNER JOIN  country ON city.country_id = country.country_id;
+```
+
+*
+
+```SQL
+SELECT first_name, last_name, payment_id FROM customer
+INNER JOIN payment ON customer.customer_id = payment.customer_id
+```
+
+*
+
+```SQL
+SELECT  first_name, last_name, rental_id FROM  customer
+INNER JOIN  rental ON customer.customer_id = rental.customer_id
+ORDER BY rental_id ASC;
+```

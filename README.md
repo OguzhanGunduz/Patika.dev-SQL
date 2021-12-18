@@ -323,3 +323,28 @@ SELECT  first_name, last_name, rental_id FROM  customer
 INNER JOIN  rental ON customer.customer_id = rental.customer_id
 ORDER BY rental_id ASC;
 ```
+
+## HomeWork 10
+
+*
+
+```SQL
+SELECT city, country FROM city
+LEFT  JOIN  country ON city.country_id = country.country_id;
+```
+
+*
+
+```SQL
+SELECT first_name, last_name, rental_id FROM customer
+RIGHT JOIN payment ON customer.customer_id = payment.customer_id
+ORDER BY rental_id ASC;
+```
+
+*
+
+```SQL
+SELECT first_name, last_name, rental_id FROM customer
+FULL JOIN  rental ON customer.customer_id = rental.customer_id
+ORDER BY rental_id ASC;
+```

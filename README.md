@@ -22,9 +22,11 @@ ELSE 'Scalene'
 END 
 FROM TRIANGLES;
 
-
 --Hackerrank = The Blunder
 SELECT  CEIL(AVG(Salary-REPLACE(Salary, '0',''))) FROM EMPLOYEES; --round up to
+--Hackerrank = top earners
+SELECT MAX(months*salary), COUNT(*) FROM Employee
+WHERE (months*salary) = (SELECT MAX(SALARY*MONTHS) FROM EMPLOYEE);
 ---------------------
 ```
 ## HomeWork 1

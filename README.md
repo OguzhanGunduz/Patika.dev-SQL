@@ -348,3 +348,29 @@ SELECT first_name, last_name, rental_id FROM customer
 FULL JOIN  rental ON customer.customer_id = rental.customer_id
 ORDER BY rental_id ASC;
 ```
+
+## HomeWork 11
+
+* actor ve customer tablolarında bulunan first_name sütunları için tüm verileri sıralayalım.
+
+```SQL
+(SELECT a.first_name FROM actor as a)
+UNION ALL -- If you dont want to repeat values then You should use UNION.
+(SELECT c.first_name FROM customer as c);
+```
+
+* actor ve customer tablolarında bulunan first_name sütunları için kesişen verileri sıralayalım.
+
+```SQL
+(SELECT a.first_name FROM actor AS a)
+INTERSECT
+(SELECT c.first_name FROM customer AS c);
+```
+
+* actor ve customer tablolarında bulunan first_name sütunları için ilk tabloda bulunan ancak ikinci tabloda bulunmayan verileri sıralayalım.
+
+```SQL
+(SELECT a.first_name FROM actor AS a)
+EXCEPT -- If you want to repeat values then You should use EXCEPT ALL.
+(SELECT c.first_name FROM customer AS c)
+```

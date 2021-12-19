@@ -11,6 +11,16 @@ ORDER BY RIGHT(name, 3), id ASC;  --right function
 SELECT CITY, LENGTH(CITY) FROM STATION  -- number of characters in the name
 ORDER BY LENGTH(CITY), CITY
 LIMIT 1;
+
+--Hackerrank = Type of Triangle
+--This is good example
+SELECT CASE 
+WHEN A + B <= C OR A + C <= B OR B + C <= A THEN 'Not A Triangle' 
+WHEN A = B AND B = C THEN 'Equilateral' 
+WHEN A = B OR B = C OR A = C THEN 'Isosceles' 
+ELSE 'Scalene' 
+END 
+FROM TRIANGLES;
 ---------------------
 ```
 ## HomeWork 1

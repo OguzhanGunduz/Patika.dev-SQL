@@ -1,6 +1,14 @@
 # Patika.dev-SQL
 Patika.dev SQL HomeWorks
 
+
+```SQL
+-----------------------
+SELECT name FROM STUDENTS
+WHERE Marks > 75
+ORDER BY RIGHT(name, 3), id ASC;  --right function
+-------------------
+```
 ## HomeWork 1
 
 * Sort the data in the title and description columns in the film table.
@@ -18,7 +26,6 @@ WHERE length > 60 AND length < 75;
 
 * Sort the data in all columns in the film table with rental_rate 0.99 AND replacement_cost 12.99 OR 28.99. 
 ```SQL
-
 SELECT * FROM film
 WHERE rental_rate > 0.99 AND replacement_cost > 12.99 OR replacement_cost = 28.99;
 ```

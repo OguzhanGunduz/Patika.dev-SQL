@@ -7,7 +7,11 @@ Patika.dev SQL HomeWorks
 SELECT name FROM STUDENTS
 WHERE Marks > 75
 ORDER BY RIGHT(name, 3), id ASC;  --right function
--------------------
+-----------------------
+SELECT CITY, LENGTH(CITY) FROM STATION  -- number of characters in the name
+ORDER BY LENGTH(CITY), CITY
+LIMIT 1;
+---------------------
 ```
 ## HomeWork 1
 

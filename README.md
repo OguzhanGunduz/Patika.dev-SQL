@@ -21,6 +21,10 @@ WHEN A = B OR B = C OR A = C THEN 'Isosceles'
 ELSE 'Scalene' 
 END 
 FROM TRIANGLES;
+
+
+--Hackerrank = The Blunder
+SELECT  CEIL(AVG(Salary-REPLACE(Salary, '0',''))) FROM EMPLOYEES; --round up to
 ---------------------
 ```
 ## HomeWork 1

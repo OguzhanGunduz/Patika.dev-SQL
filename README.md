@@ -28,6 +28,10 @@ SELECT  CEIL(AVG(Salary-REPLACE(Salary, '0',''))) FROM EMPLOYEES; --round up to
 SELECT MAX(months*salary), COUNT(*) FROM Employee
 WHERE (months*salary) = (SELECT MAX(SALARY*MONTHS) FROM EMPLOYEE);
 ---------------------
+
+-- Hackerrank = Weather Observation Station 18
+SELECT ABS(a-c)+ABS(b-d) FROM (SELECT MIN(LAT_N) AS a, MIN(LONG_W) AS b, MAX(LAT_N) AS c, MAX(LONG_W) AS d FROM STATION);
+
 ```
 ## HomeWork 1
 

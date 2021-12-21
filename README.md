@@ -30,8 +30,12 @@ WHERE (months*salary) = (SELECT MAX(SALARY*MONTHS) FROM EMPLOYEE);
 ---------------------
 
 -- Hackerrank = Weather Observation Station 18
-SELECT ABS(a-c)+ABS(b-d) FROM (SELECT MIN(LAT_N) AS a, MIN(LONG_W) AS b, MAX(LAT_N) AS c, MAX(LONG_W) AS d FROM STATION);
 
+SELECT ROUND(ABS((MIN(LAT_N)-MAX(LAT_N))+(MIN(LONG_W)-MAX(LONG_W))),4) FROM STATION; --- TRUE ANSWER
+
+----
+SELECT ABS(a-c)+ABS(b-d) FROM (SELECT MIN(LAT_N) AS a, MIN(LONG_W) AS b, MAX(LAT_N) AS c, MAX(LONG_W) AS d FROM STATION); THIS JUST MY NOTES.
+----
 ```
 ## HomeWork 1
 

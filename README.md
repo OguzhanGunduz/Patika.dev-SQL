@@ -34,9 +34,28 @@ WHERE (months*salary) = (SELECT MAX(SALARY*MONTHS) FROM EMPLOYEE);
 SELECT ROUND(ABS((MIN(LAT_N)-MAX(LAT_N))+(MIN(LONG_W)-MAX(LONG_W))),4) FROM STATION; --- TRUE ANSWER
 
 ----
-SELECT ABS(a-c)+ABS(b-d) FROM (SELECT MIN(LAT_N) AS a, MIN(LONG_W) AS b, MAX(LAT_N) AS c, MAX(LONG_W) AS d FROM STATION); THIS JUST MY NOTES.
+SELECT ROUND(ABS((MIN(LAT_N)-MAX(LAT_N))+(MIN(LONG_W)-MAX(LONG_W))),4) FROM(
+    SELECT
+    MIN(LAT_N) AS a,
+    MIN(LONG_W) AS b,
+    MAX(LAT_N) AS c, 
+    MAX(LONG_W) AS d 
+    FROM STATION) z; 
 ----
+--Hackerrank = Weather Observation Station 19
+
+SELECT
+ROUND(SQRT(power(a-b,2)+power(d-c,2)),4)
+FROM(
+    SELECT
+    MIN(LAT_N) AS a,
+    MAX(LAT_N) AS b, 
+    MIN(LONG_W) AS c,
+    MAX(LONG_W) AS d 
+    FROM STATION) z; 
+
 ```
+
 ## HomeWork 1
 
 * Sort the data in the title and description columns in the film table.

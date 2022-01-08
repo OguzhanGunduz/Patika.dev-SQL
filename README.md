@@ -5,14 +5,27 @@ Patika.dev SQL HomeWorks
 
 
 ```SQL
-Hackerrank = The PATDS
+
+--Hackerrank = Binary Tree Nodes
+SELECT b.N,
+       (CASE WHEN b.P IS NULL
+             THEN 'Root' 
+             WHEN (SELECT COUNT(*) FROM BST b2 WHERE b2.P = b.N) > 0 
+             THEN 'Inner'
+             ELSE 'Leaf'
+        END)
+FROM bst b 
+ORDER BY N;
+
+------------------------------------------------------------
+--Hackerrank = The PATDS
 SELECT CONCAT(Name, '(', LEFT(Occupation, 1), ')') FROM OCCUPATIONS
 ORDER BY Name ASC;
 SELECT CONCAT('There are a total of ',COUNT(OCCUPATION),' ',LOWER(OCCUPATION),'s.')
 FROM OCCUPATIONS
 GROUP BY OCCUPATION
 ORDER BY COUNT(OCCUPATION), OCCUPATION;
-
+-------------------------------------------------------------------
 
 
 --Hackerrank = African Cities

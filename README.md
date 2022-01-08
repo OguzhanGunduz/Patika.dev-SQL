@@ -33,11 +33,11 @@ SELECT a.NAME FROM CITY AS a
 INNER JOIN COUNTRY AS b ON a.CountryCode = b.Code
 WHERE b.CONTINENT = "Africa";
 
------------------------
+----------------------------------------------------------------------
 SELECT name FROM STUDENTS
 WHERE Marks > 75
 ORDER BY RIGHT(name, 3), id ASC;  --right function
------------------------
+-----------------------------------------------------------------------
 SELECT CITY, LENGTH(CITY) FROM STATION  -- number of characters in the name
 ORDER BY LENGTH(CITY), CITY
 LIMIT 1;
@@ -51,13 +51,13 @@ WHEN A = B OR B = C OR A = C THEN 'Isosceles'
 ELSE 'Scalene' 
 END 
 FROM TRIANGLES;
-
+-------------------------------------------------
 --Hackerrank = The Blunder
 SELECT  CEIL(AVG(Salary-REPLACE(Salary, '0',''))) FROM EMPLOYEES; --round up to
 --Hackerrank = top earners
 SELECT MAX(months*salary), COUNT(*) FROM Employee
 WHERE (months*salary) = (SELECT MAX(SALARY*MONTHS) FROM EMPLOYEE);
----------------------
+------------------------------------------------
 
 -- Hackerrank = Weather Observation Station 18
 

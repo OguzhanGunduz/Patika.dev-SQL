@@ -1,16 +1,25 @@
 # Patika.dev-SQL
 Patika.dev SQL HomeWorks
 
---Hackerrank = African Cities
+
+
+
 ```SQL
+Hackerrank = The PATDS
+SELECT CONCAT(Name, '(', LEFT(Occupation, 1), ')') FROM OCCUPATIONS
+ORDER BY Name ASC;
+SELECT CONCAT('There are a total of ',COUNT(OCCUPATION),' ',LOWER(OCCUPATION),'s.')
+FROM OCCUPATIONS
+GROUP BY OCCUPATION
+ORDER BY COUNT(OCCUPATION), OCCUPATION;
+
+
+
+--Hackerrank = African Cities
 SELECT a.NAME FROM CITY AS a
 INNER JOIN COUNTRY AS b ON a.CountryCode = b.Code
 WHERE b.CONTINENT = "Africa";
-```
 
-
-
-```SQL
 -----------------------
 SELECT name FROM STUDENTS
 WHERE Marks > 75

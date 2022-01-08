@@ -1,6 +1,14 @@
 # Patika.dev-SQL
 Patika.dev SQL HomeWorks
 
+--Hackerrank = African Cities
+```SQL
+SELECT a.NAME FROM CITY AS a
+INNER JOIN COUNTRY AS b ON a.CountryCode = b.Code
+WHERE b.CONTINENT = "Africa";
+```
+
+
 
 ```SQL
 -----------------------

@@ -6,6 +6,23 @@ Patika.dev SQL HomeWorks
 
 ```SQL
 
+--Hackerrank = The REPORT
+
+this is my solution but its not holds. 
+SELECT s.name,(CASE WHEN 90<=s.Marks THEN 10                  WHEN 80<=s.Marks THEN 9
+               WHEN 70<=s.Marks THEN 8
+               ELSE NULL END) AS z ,s.Marks FROM Students AS s 
+ORDER BY s.name DESC ,s.mARKS DESC;
+
+
+This is a good solution, I must to understand this. 
+-----------------------
+SELECT IF(GRADES.GRADE>=8, STUDENTS.NAME, NULL),GRADES.GRADE, STUDENTS.MARKS
+FROM GRADES, STUDENTS
+WHERE STUDENTS.MARKS BETWEEN GRADES.MIN_MARK AND GRADES.MAX_MARK
+ORDER BY GRADES.GRADE DESC, STUDENTS.NAME;
+-----------------------
+
 --Hackerrank = Binary Tree Nodes
 SELECT b.N,
        (CASE WHEN b.P IS NULL
